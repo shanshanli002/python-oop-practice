@@ -20,6 +20,10 @@ class WordFinder:
         
         print (f"{len(self.list_of_words)} words read")
 
+    def __repr__(self) -> str:
+        #printable representation of the obj. %s = file 
+        return 'WordFinder(file=%s)' % (self.list_of_words)
+    
     def random(self):
         """print a random word from list_of_words list"""
         random_num = random.randint(0,len(self.list_of_words))
